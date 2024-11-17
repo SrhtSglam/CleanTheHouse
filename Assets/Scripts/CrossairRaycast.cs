@@ -64,6 +64,7 @@ public class CrossairRaycast : MonoBehaviour
     {
         // Destroy(collectible);
         // collectible.transform.position = new Vector3(1.767528f, -0.8742792f, 12.3567f);
+        // collectible.transform.parent = null;
         collectible.transform.localPosition = collectible.GetComponent<ObjectLocation>().startPos;
         collectible.transform.rotation = Quaternion.Euler(collectible.GetComponent<ObjectLocation>().startRot);
         collectible.tag = "Untagged";
