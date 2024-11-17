@@ -23,7 +23,10 @@ public class Manager : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
-
+        if(PlayerPrefs.HasKey("IsTutorial") == false){
+            PlayerPrefs.SetInt("IsTutorial", 0);
+            PlayerPrefs.Save();
+        }
         if(PlayerPrefs.HasKey("TimeValue") == false){
             PlayerPrefs.SetInt("TimeValue", 0);
             PlayerPrefs.Save();
